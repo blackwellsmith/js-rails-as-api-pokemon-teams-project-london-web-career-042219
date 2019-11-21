@@ -1,5 +1,10 @@
 class PokemonsController < ApplicationController
 
+    def index
+        @pokemons = Pokemon.all 
+        render json: @pokemons.to_json
+    end
+
     def create
         @pokemon = Pokemon.create(trainer_id: params[:trainer_id], species: params[:species], nickname: params[:nickname])
         render json: @pokemon.to_json

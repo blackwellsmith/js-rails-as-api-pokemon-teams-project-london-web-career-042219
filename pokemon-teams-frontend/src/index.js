@@ -41,5 +41,5 @@ function pokemonCard(pokemon) {
     const button = document.createElent('button')
     button.setAttribute("id", pokemon.id)
     li.appendChild(button)
-    li.innerHTML = `${pokemon.name} (${pokemon.species})`
+    li.innerHTML = `${pokemon.nickname} (${pokemon.species})`
 }
