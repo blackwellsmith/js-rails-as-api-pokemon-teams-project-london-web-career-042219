@@ -49,11 +49,11 @@ function renderPokemons(pokemons) {
 
 function pokemonCard(pokemon) {
     const li = document.createElement('li')
-    let btn = document.createElement('button')
+    const btn = document.createElement('button')
     btn.setAttribute("data-pokemon-id", pokemon.id)
     btn.setAttribute("class", 'release')
     btn.innerHTML = 'Release'
-    li.appendChild(btn)
+    li.append(btn)
     li.innerHTML = `${pokemon.nickname} (${pokemon.species})`
     return li
 }
